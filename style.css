@@ -24,3 +24,17 @@ flex:auto
     border-style: solid;
     flex: auto;
 }
+
+#btn{
+        display: flex;
+        justify-content: center;
+        width: 1000px;
+      
+}
+
+.button{
+    padding: 20px 50px;
+    font-size: large;
+    background-color: darkslategrey;
+    color: cornsilk;
+}
