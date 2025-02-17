@@ -19,9 +19,17 @@ let create = function(num){
     }
 }
 
-create(4)
+let clickMe = document.querySelector(".button")
 
 
-main.addEventListener("mouseover", (Event) =>{
-    Event.target.classList.toggle("hover")
-} )
+
+let promptMe = function(){
+    let input = prompt("how many rows would you like to create? (max = 100)")
+    create(input)
+    main.addEventListener("mouseover", (Event) =>{
+        Event.target.classList.toggle("hover")
+    } )
+}
+
+clickMe.addEventListener("click", promptMe);
+
