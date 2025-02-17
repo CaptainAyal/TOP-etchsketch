@@ -21,14 +21,22 @@ let create = function(num){
 
 let clickMe = document.querySelector(".button")
 
-
-
 let promptMe = function(){
-    let input = prompt("how many rows would you like to create? (max = 100)")
+    while (main.firstChild){
+        main.removeChild(main.firstChild)
+    }
+    
+    let input = prompt("how many rows would you like to create? (1 - 100)")
+    if (input>100 || input<1) {
+        alert("Valid Input is between 1 and 100, please choose a valid input")
+    } else {
+        
+    
     create(input)
     main.addEventListener("mouseover", (Event) =>{
         Event.target.classList.toggle("hover")
     } )
+    }
 }
 
 clickMe.addEventListener("click", promptMe);
