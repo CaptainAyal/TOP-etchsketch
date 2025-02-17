@@ -7,9 +7,20 @@ border-width: 5px;
 border-color: blue;
 }
 
+.row{
+display:flex;
+flex-direction: column;
+flex:auto
+}
+
 .box{
     background-color: chartreuse;
-    min-width: 100px;
+    border-style: solid;
+    flex: auto;
+}
+
+.hover{
+    background-color: purple;
     border-style: solid;
     flex: auto;
 }
