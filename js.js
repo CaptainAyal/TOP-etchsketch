@@ -5,7 +5,7 @@ let create = function(num){
     while (i<num) {
         let row = document.createElement("div")
         row.classList.add("row")
-        
+
         let ii= 0
         while (ii<num){
             let sub = document.createElement("div")
@@ -18,12 +18,13 @@ let create = function(num){
        i++
     }
 }
-
+//make starting grid
 create(10)
 
 let clickMe = document.querySelector(".button")
 
 let promptMe = function(){
+    //remove previous grid
     while (main.firstChild){
         main.removeChild(main.firstChild)
     }
@@ -38,20 +39,15 @@ let promptMe = function(){
 
     }
 }
-
-let chooseColor = function(){
-    let r = Math.floor((Math.random() * 256))
-    let g = Math.floor((Math.random() * 256))
-    let b = Math.floor((Math.random() * 256))
-    console.log(r, g, b)
-}
-
+//button to resize the grid
 clickMe.addEventListener("click", promptMe);
 
 main.addEventListener("mouseover", (Event) =>{
     let r = Math.floor((Math.random() * 256))
     let g = Math.floor((Math.random() * 256))
     let b = Math.floor((Math.random() * 256))
-    Event.target.classList.toggle("hover")
+    console.log(r, g, b)
+    Event.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
 } )
+
 
