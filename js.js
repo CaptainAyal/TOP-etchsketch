@@ -19,6 +19,8 @@ let create = function(num){
     }
 }
 
+create(10)
+
 let clickMe = document.querySelector(".button")
 
 let promptMe = function(){
@@ -33,11 +35,23 @@ let promptMe = function(){
         
     
     create(input)
-    main.addEventListener("mouseover", (Event) =>{
-        Event.target.classList.toggle("hover")
-    } )
+
     }
 }
 
+let chooseColor = function(){
+    let r = Math.floor((Math.random() * 256))
+    let g = Math.floor((Math.random() * 256))
+    let b = Math.floor((Math.random() * 256))
+    console.log(r, g, b)
+}
+
 clickMe.addEventListener("click", promptMe);
+
+main.addEventListener("mouseover", (Event) =>{
+    let r = Math.floor((Math.random() * 256))
+    let g = Math.floor((Math.random() * 256))
+    let b = Math.floor((Math.random() * 256))
+    Event.target.classList.toggle("hover")
+} )
 
